@@ -5,4 +5,4 @@ workflows:
   load_test:
     jobs:
      - grafana/k6:
-          script: test.js -c ./config.json > /tmp/artifacts
+          script: test.js -c ./config.json summary.html > /tmp/artifacts
