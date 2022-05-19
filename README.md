@@ -9,7 +9,7 @@ Endpoints :
  - /POST posts: create a post
 
  #### Directory structure
- .
+```
 ├── config.json
 ├── data
 │   └── request.js
@@ -19,5 +19,6 @@ Endpoints :
 ├── LICENSE
 ├── README.md
 └── test.js
+```
 
 Report: ```summary.html```
