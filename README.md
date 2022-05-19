@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/pascalesdedy/k6_loadtest/tree/main.svg?style=shield)](https://circleci.com/gh/pascalesdedy/k6_loadtest/tree/main)
+[![CircleCI](https://circleci.com/gh/pascalesdedy/k6_loadtest/tree/circleci-project-setup.svg?style=shield)](https://circleci.com/gh/pascalesdedy/k6_loadtest/tree/circleci-project-setup)
 
 # Load testing using k6
 
