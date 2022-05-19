@@ -1,10 +1,18 @@
 import http from 'k6/http';
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/2.2.0/dist/bundle.js";
 import { check, group } from 'k6';
 import { http_not_200, http_not_201, http_duration, errorRate, iterationSuccess, iterationFailed } from './helpers/custom_metrics.js'
 import { url_api, path } from './helpers/global_variable.js'
 import { paramsCreatePost, payload } from './data/request.js'
 
-/* Test Scenario */
+// k6-reporter
+export function handleSummary(data) {
+	return {
+	  "summary.html": htmlReport(data),
+	};
+  }
+
+/* Test case */
 export function getUsers() {
 	group('Loadtest - method GET Users', function(){
 		//header
