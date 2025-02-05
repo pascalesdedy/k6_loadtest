@@ -12,6 +12,29 @@ export function handleSummary(data) {
 	};
   }
 
+export let options = {
+	scenarios: {
+		getUsers: {
+        	executor: "constant-arrival-rate",
+           	rate: 1,
+            timeUnit: "1s",
+            duration: "1s",
+            preAllocatedVUs: 1,
+            maxVUs: 1,
+			exec: 'getUsers'
+        },createPost: {
+			executor: "constant-arrival-rate",	
+			rate: 1,
+			timeUnit: "1s",
+            duration: "1s",
+            preAllocatedVUs: 1,
+            maxVUs: 1,
+            exec: 'createPost'  
+    	},		
+	},
+};
+
+
 /* Test case */
 export function getUsers() {
 	group('Loadtest - method GET Users', function(){
